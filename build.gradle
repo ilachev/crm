@@ -168,23 +168,23 @@ project.ext.diffChangelogFile = "src/main/resources/config/liquibase/changelog/"
 liquibase {
     activities {
         main {
-            driver "org.postgresql.Driver"
-            url "jdbc:postgresql://localhost:5432/crm"
-            username "crm"
+            driver "com.mysql.cj.jdbc.Driver"
+            url "jdbc:mysql://localhost:3306/crm"
+            username "root"
             password ""
             changeLogFile "src/main/resources/config/liquibase/master.xml"
-            defaultSchemaName ""
+            defaultSchemaName "crm"
             logLevel "debug"
             classpath "src/main/resources/"
         }
         diffLog {
-            driver "org.postgresql.Driver"
-            url "jdbc:postgresql://localhost:5432/crm"
-            username "crm"
+            driver "com.mysql.cj.jdbc.Driver"
+            url "jdbc:mysql://localhost:3306/crm"
+            username "root"
             password ""
             changeLogFile project.ext.diffChangelogFile
-            referenceUrl "hibernate:spring:ru.restoclub.crm.domain?dialect=io.github.jhipster.domain.util.FixedPostgreSQL95Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
-            defaultSchemaName ""
+            referenceUrl "hibernate:spring:ru.restoclub.crm.domain?dialect=org.hibernate.dialect.MySQL8Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+            defaultSchemaName "crm"
             logLevel "debug"
             classpath "$buildDir/classes/java/main"
         }
@@ -272,8 +272,8 @@ dependencies {
         exclude module: "mapstruct"
     }
     implementation "io.springfox:springfox-bean-validators"
-    implementation "org.postgresql:postgresql"
-    liquibaseRuntime "org.postgresql:postgresql"
+    implementation "mysql:mysql-connector-java"
+    liquibaseRuntime "mysql:mysql-connector-java"
     implementation "org.mapstruct:mapstruct:${mapstruct_version}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstruct_version}"
     annotationProcessor "org.hibernate:hibernate-jpamodelgen:${hibernate_version}"

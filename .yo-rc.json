@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "promptValues": {
       "packageName": "ru.restoclub.crm",
-      "nativeLanguage": "en"
+      "nativeLanguage": "ru"
     },
     "jhipsterVersion": "6.5.1",
     "applicationType": "monolith",
@@ -15,17 +15,17 @@
     "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "postgresql",
-    "prodDatabaseType": "postgresql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
     "searchEngine": false,
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "gradle",
     "enableSwaggerCodegen": true,
-    "jwtSecretKey": "NzM2NzE5MWVlZWFkMmIxMmExMGRmMWE4M2M5NmY0M2M4NjgyNWIyMTRhMTg5NDM2MjFiMThkNjA3MTJiM2VlOGYwNWI1NWZjNmJjNmNkOGYxOTY1MThiZDBlOGI3MDI4ZGY2Yjg1NjExOWJkYmE4MWVmZDcxOTMzMjBiOTdmZTE=",
+    "jwtSecretKey": "OGQ0ODc5Y2UzNzgyYjY5NjY0N2YzOTY0YmE4M2FmNjgxNzNlNzY3MDM1ODZhODAyNDQyOGI2Y2IzYjExYjhkMGQwYzg2YWNjNjU5Mjk5MjZiOGEyNzA0ZTFiOTBhNjkxNmFhMGVjODkyNzQ5OTJjMWNiYWQ2YzNiZWEzZDYyNDc=",
     "embeddableLaunchScript": false,
     "useSass": true,
-    "clientPackageManager": "npm",
+    "clientPackageManager": "yarn",
     "clientFramework": "react",
     "clientTheme": "none",
     "clientThemeVariant": "",
@@ -35,8 +35,8 @@
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": true,
-    "nativeLanguage": "en",
-    "languages": ["en", "ru"],
+    "nativeLanguage": "ru",
+    "languages": ["ru", "en"],
     "blueprints": []
   }
 }

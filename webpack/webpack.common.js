@@ -113,7 +113,7 @@ module.exports = options => ({
       { from: './node_modules/swagger-ui/dist/css', to: 'swagger-ui/dist/css' },
       { from: './node_modules/swagger-ui/dist/lib', to: 'swagger-ui/dist/lib' },
       { from: './node_modules/swagger-ui/dist/swagger-ui.min.js', to: 'swagger-ui/dist/swagger-ui.min.js' },
-      { from: './src/main/webapp//swagger-ui/', to: 'swagger-ui' },
+      { from: './src/main/webapp/swagger-ui/', to: 'swagger-ui' },
       { from: './src/main/webapp/content/', to: 'content' },
       { from: './src/main/webapp/favicon.ico', to: 'favicon.ico' },
       { from: './src/main/webapp/manifest.webapp', to: 'manifest.webapp' },
@@ -129,8 +129,8 @@ module.exports = options => ({
     new MergeJsonWebpackPlugin({
       output: {
         groupBy: [
-                    { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" },
-                    { pattern: "./src/main/webapp/i18n/ru/*.json", fileName: "./i18n/ru.json" }
+                    { pattern: "./src/main/webapp/i18n/ru/*.json", fileName: "./i18n/ru.json" },
+                    { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" }
                     // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
                 ]
       }
