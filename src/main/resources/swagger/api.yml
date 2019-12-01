@@ -19,4 +19,4 @@ components:
       scheme: bearer
       bearerFormat: JWT
 security:
-  - jwt: []
+  - Bearer: []
