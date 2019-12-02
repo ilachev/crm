@@ -1,9 +1,5 @@
 package ru.restoclub.crm.security;
 
-import ru.restoclub.crm.CrmApp;
-import ru.restoclub.crm.domain.User;
-import ru.restoclub.crm.repository.UserRepository;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
+import ru.restoclub.crm.CrmApp;
+import ru.restoclub.crm.domain.user.User;
+import ru.restoclub.crm.repository.user.UserRepository;
 
 import java.util.Locale;
 

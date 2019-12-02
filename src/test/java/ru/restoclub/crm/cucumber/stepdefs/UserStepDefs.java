@@ -3,13 +3,11 @@ package ru.restoclub.crm.cucumber.stepdefs;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import ru.restoclub.crm.web.rest.UserResource;
+import ru.restoclub.crm.web.rest.user.UserController;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -17,13 +15,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UserStepDefs extends StepDefs {
 
     @Autowired
-    private UserResource userResource;
+    private UserController userController;
 
     private MockMvc restUserMockMvc;
 
     @Before
     public void setup() {
-        this.restUserMockMvc = MockMvcBuilders.standaloneSetup(userResource).build();
+        this.restUserMockMvc = MockMvcBuilders.standaloneSetup(userController).build();
     }
 
     @When("I search user {string}")
